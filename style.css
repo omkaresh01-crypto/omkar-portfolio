@@ -1150,3 +1150,28 @@ body::after { background:var(--accent); }
   visibility: visible !important;
   opacity: 1 !important;
 }
+
+/* FIX: Keep portfolio projects visible */
+.work-page-grid .actual-project,
+.work-page-grid .actual-project.visible {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Graphic design images */
+.design-image-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #171717;
+}
+
+.design-image-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
