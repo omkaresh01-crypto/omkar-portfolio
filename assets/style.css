@@ -1324,3 +1324,25 @@ html {
     transition: none;
   }
 }
+
+/* Cinematic section-by-section scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+}
+
+main > section {
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+}
+
+/* Keep sections comfortable on smaller screens */
+@media (max-width: 700px) {
+  html {
+    scroll-snap-type: y proximity;
+  }
+
+  main > section {
+    scroll-snap-align: start;
+  }
+}
