@@ -66,7 +66,38 @@ if (canHover) {
     });
   });
 }
+
 document.addEventListener("DOMContentLoaded", () => {
+  const sections = Array.from(
+    document.querySelectorAll("main > section")
+  ).filter((section) => {
+    return !section.classList.contains("hero") &&
+           !section.classList.contains("contact-strip");
+  });
+
+  if (!("IntersectionObserver" in window)) {
+    return;
+  }
+
+  sections.forEach((section) => {
+    section.classList.add("reveal-on-scroll");
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.08,
+    rootMargin: "0px 0px -10% 0px"
+  });
+
+  sections.forEach((section) => observer.observe(section));
+});
+
   const sections = document.querySelectorAll("main > section");
 
   if (!("IntersectionObserver" in window)) {
