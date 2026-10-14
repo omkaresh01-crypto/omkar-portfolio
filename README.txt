@@ -1,1 +1,0 @@
-Upload all files to GitHub repository and enable GitHub Pages.
