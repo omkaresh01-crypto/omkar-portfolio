@@ -66,3 +66,33 @@ if (canHover) {
     });
   });
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("main > section");
+
+  if (!("IntersectionObserver" in window)) {
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12
+  });
+
+  sections.forEach((section) => {
+    if (
+      section.classList.contains("hero") ||
+      section.classList.contains("contact-strip")
+    ) {
+      return;
+    }
+
+    section.classList.add("reveal-on-scroll");
+    observer.observe(section);
+  });
+});
