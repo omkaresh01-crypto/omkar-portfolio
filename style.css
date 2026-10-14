@@ -1175,3 +1175,29 @@ body::after { background:var(--accent); }
   height: 100%;
   object-fit: contain;
 }
+
+/* Fix visibility of all portfolio project cards */
+.work-page-grid .actual-project,
+.work-page-grid .actual-project.reveal,
+.work-page-grid .actual-project.visible {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Keep graphic design image visible */
+.work-page-grid .design-image-frame {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #171717;
+}
+
+.work-page-grid .design-image-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
