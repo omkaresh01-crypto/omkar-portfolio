@@ -1138,3 +1138,15 @@ body::after { background:var(--accent); }
 
 }
 @media(prefers-reduced-motion:reduce) { .hero-portrait img { animation:none; } }
+
+.work-page-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 50px 22px !important;
+}
+
+.work-page-grid > .project-card {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
