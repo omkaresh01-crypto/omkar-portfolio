@@ -1114,5 +1114,27 @@ body::after { background:var(--accent); }
   .hero-neo h1 { font-size:clamp(4rem,19vw,6.5rem); }
   .tools-section, .feature-section, .work-section, .services-section, .about-section, .contact-section { padding-top:55px; padding-bottom:55px; }
   .hero-portrait .portrait-sticker { font-size:8px; }
+  
+.design-image-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #171717;
+  border-radius: 12px;
+}
+
+.design-image-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.graphic-design-card:hover .design-image-frame img {
+  transform: scale(1.03);
+}
+
 }
 @media(prefers-reduced-motion:reduce) { .hero-portrait img { animation:none; } }
