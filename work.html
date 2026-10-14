@@ -25,6 +25,37 @@
         </video>
         <span class="video-category">Commercial</span>
         <span class="video-index">01 / 05</span>
+      
+<article class="project-card actual-project graphic-design-card">
+  <div class="design-image">
+    <img src="images/poster-design-1.jpg" alt="Poster design">
+  </div>
+  <div class="graphic 1">
+    <h3>Poster Design</h3>
+    <p>Graphic Design</p>
+  </div>
+</article>
+
+<article class="project-card actual-project graphic-design-card">
+  <div class="design-image">
+    <img src="images/logo-design-1.png" alt="Logo design">
+  </div>
+  <div class="graphic 2">
+    <h3>Logo Design</h3>
+    <p>Brand Identity</p>
+  </div>
+</article>
+
+<article class="project-card actual-project graphic-design-card">
+  <div class="design-image">
+    <img src="images/social-media-design-1.jpg" alt="Social media design">
+  </div>
+  <div class="graphic 3">
+    <h3>Social Media Creative</h3>
+    <p>Graphic Design</p>
+  </div>
+</article>
+
       </div>
       <div class="project-caption"><div><h2>Expanza Media — Brand Film</h2><p>Brand content · Video editing</p></div><span class="caption-arrow">↗</span></div>
     </article>
@@ -98,3 +129,24 @@
   <footer class="site-footer wrap"><a class="wordmark" href="index.html"><span class="brand-mark">▶</span> OMKAR<span class="wordmark-sub">VIDEO EDITOR</span></a><p>Video Editor & Motion Graphics Artist · <span id="year"></span></p><a class="text-link" href="contact.html">Start a project ↗</a></footer>
 </body>
 </html>
+
+.design-image-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #171717;
+  border-radius: 12px;
+}
+
+.design-image-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .design-image-frame img {
+  transform: scale(1.03);
+}
